@@ -10,8 +10,15 @@ class AuthController extends Controller
 {
   use ApiResponses;
 
+  public function register()
+  {
+    return $this->ok('User registered successfully');
+  }
+  
+  
   public function login(ApiLoginRequest $request)
   {
     return $this->ok($request->get('email'));
   }
+
 }
